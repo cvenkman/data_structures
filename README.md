@@ -1,9 +1,9 @@
 import for all main functions:
 ``` go
 import (
-	"fmt"
+    "fmt"
     "log"
-	DS "github.com/cvenkman/data_structures"
+    DS "github.com/cvenkman/data_structures"
 )
 ```
 
