@@ -1,5 +1,5 @@
 ## Data Structures (containers)
-    - [Stack](#Stack)
+    - [Stack](#stack)
     - [Queue](#Queue)
 
 import for all main functions:
