@@ -13,31 +13,31 @@ type Queue struct {
 }
 
 // add a value at the end; panic if try add another type
-func (s *Queue) Enqueue(value any) {
+func (q *Queue) Enqueue(value any) {
 	/* check valye type */
-	if len(s.items) == 0 {
+	if len(q.items) == 0 {
 		queueType = reflect.TypeOf(value)
 	}
 	if reflect.TypeOf(value) != queueType {
 		panic("stack type error")
 	}
-	s.items = append(s.items, value)
+	q.items = append(q.items, value)
 }
 
-// remove and return a value at the end
-func (s *Queue) Dequeue() (any, error) {
-	if len(s.items) < 1 {
+// remove and return a first value
+func (q *Queue) Dequeue() (any, error) {
+	if q.Empty() {
 		return '0', errors.New("empty stack")
 	}
 
-	firstValue := s.items[0]
-	s.items = s.items[1:]
+	firstValue := q.items[0]
+	q.items = q.items[1:]
 	return firstValue, nil
 }
 
 // return true if queue is empty and false if not
-func (s *Queue) Empty() bool {
-	if len(s.items) > 0 {
+func (q *Queue) Empty() bool {
+	if len(q.items) > 0 {
 		return false
 	}
 	return true

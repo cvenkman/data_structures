@@ -27,7 +27,7 @@ func (s *Stack) Push(value any) {
 // remove and return a value at the end
 func (s *Stack) Pop() (any, error) {
 	lastIndex := len(s.items) - 1
-	if lastIndex < 0 {
+	if s.Empty() {
 		return '0', errors.New("empty stack")
 	}
 
