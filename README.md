@@ -1,6 +1,6 @@
 ## Data Structures (containers)
-    - [Stack](#stack)
-    - [Queue](#Queue)
+* [Stack](#stack)
+* [Queue](#Queue)
 
 import for all main functions:
 ``` go
